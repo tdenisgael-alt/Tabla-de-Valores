@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #464646;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px 20px 25px 20px;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 52px;
+    color: #2962bd;
+    font-weight: bold;
+}
+
+header h2 {
+    margin: 6px 0;
+    font-size: 20px;
+    color: #142850;
+}
+
+.autores {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.operadores {
+    background-color: #e0ecff;
+    border: 1px solid #2962bd;
+    border-radius: 4px;
+    padding: 14px;
+    text-align: center;
+}
+
+.operadores h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #142850;
+}
+
+.radio-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.radio-contenedor label {
+    font-size: 14px;
+    color: #142850;
+    cursor: pointer;
+}
+
+.radio-contenedor input {
+    cursor: pointer;
+}
+
+#btnAplicar {
+    background-color: #2962bd;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#btnAplicar:hover {
+    background-color: #1f4d98;
+}
+
+.tabla-contenedor {
+    margin-top: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    background-color: #2962bd;
+    color: white;
+}
+
+th {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid white;
+}
+
+td {
+    padding: 7px;
+    height: 34px;
+    border: 1px solid #dbe7f8;
+    font-size: 15px;
+}
+
+select {
+    width: 90%;
+    padding: 6px;
+    border: 1px solid #b8ccec;
+    border-radius: 3px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.resultado {
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+
+    .contenedor {
+        padding: 10px;
+    }
+
+    .radio-contenedor {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    header h1 {
+        font-size: 42px;
+    }
+
+    header h2 {
+        font-size: 17px;
+    }
+}

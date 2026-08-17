@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de verdad de P y Q</title>
+
+    <link rel="stylesheet" href="Tabla_de_Valores.css">
+
+    <style>
+        /* Estilos generales para una mejor apariencia */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        /* Contenedor principal centrado y con ancho máximo */
+        .contenedor {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* --- Estilos para el nuevo encabezado --- */
+        .nuevo-header {
+            /* Compensa el padding del .contenedor para que el header ocupe todo el ancho */
+            margin: -2rem -2rem 2rem -2rem;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden; /* Asegura que el contenido respete los bordes redondeados */
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: #ffffff;
+        }
+
+        .header-logo {
+            height: 50px;
+        }
+
+        .header-uni-name {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #003366; /* Azul oscuro institucional */
+        }
+
+        .header-bottom-bar {
+            background-color: #0055a4; /* Azul institucional */
+            padding: 0.75rem 2rem;
+            text-align: center;
+        }
+
+        .header-bottom-bar h2 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+        /* --- Fin de estilos para el nuevo encabezado --- */
+
+        /* Sección de operadores */
+        .operadores {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Contenedor de los radio buttons para que se adapten */
+        .radio-contenedor {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+            justify-content: center;
+            gap: 1rem; /* Espacio entre los operadores */
+            margin: 1rem 0;
+        }
+
+        /* Contenedor de la tabla para que sea desplazable en pantallas pequeñas */
+        .tabla-contenedor {
+            overflow-x: auto; /* Añade desplazamiento horizontal si la tabla no cabe */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            color: #555;
+            font-size: 0.9em;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header class="nuevo-header">
+            <div class="header-top">
+                <img src="img/uni.png" alt="Logo UNI" class="header-logo">
+                <span class="header-uni-name">UNIVERSIDAD NACIONAL DE INGENIERÍA</span>
+            </div>
+            <div class="header-bottom-bar">
+                <h2>Tabla de Valores</h2>
+            </div>
+        </header>
+
+        <section class="operadores">
+
+            <h3>Selecciona un operador:</h3>
+
+            <div class="radio-contenedor">
+
+                <label>
+                    <input
+                        type="radio"
+                        name="operador"
+                        value="AND"
+                        checked
+                    >
+                    Y (∧)
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="operador"
+                        value="OR"
+                    >
+                    O (∨)
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="operador"
+                        value="IMPLICA"
+                    >
+                    Implica (→)
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="operador"
+                        value="BICOND"
+                    >
+                    Bicondicional (↔)
+                </label>
+
+            </div>
+
+        </section>
+
+        <section class="tabla-contenedor">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>p</th>
+                        <th>q</th>
+                        <th id="tituloResultado">
+                            Resultado (AND)
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaValores">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <footer>
+            <p>Matematica Discreta</p>
+            <p>Denis gael Vallecillo Treminio - 2024-1837U</p>
+            <p>2M3-COM-S</p>
+        </footer>
+
+    </div>
+
+    <script src="Tabla_de_Valores.js"></script>
+
+</body>
+</html>
